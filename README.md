@@ -12,19 +12,38 @@ The site is public at <http://dst4l.github.io> and eventually at <http://www.dst
 Adding or changing a simple file can be done directly via Github.
 
 
-### Edit and preview localy on your own PC
+### Edit and preview locally on your own PC
 
 #### Install Jekyll
 
-See [Installing Jekyll on Windows](http://jekyll.tips/jekyll-casts/install-jekyll-on-windows/)
+choose install [Ruby](https://rubyinstaller.org/downloads/)
+
+then open a Command prompt at run
+
+    gem install jekyll
+    gem install bundler
+
+Verify Jekyll installation
+
+    jekyll -v
 
 
-#### Fork and Clone the github repo.
+#### Fork and Clone the GitHub repo.
 
+
+#### Install needed Gems
+in the Command prompt remember to change directory to where you cloned the repo
+
+    bundle install
 
 #### Run Jekyll locally to preview changes
+still in the same directory as above
 
-    jekyll serve --watch
+    bundle exec jekyll serve --watch
+
+or simply run
+
+    Start_Server.bat
 
 #### Commit and make a pull-request
 
@@ -49,7 +68,7 @@ Each speaker should have a page in the `_speakers` directory. A speaker page sho
     ---
     speaker-id: johndoe
     fullname: John Doe
-    shortname: John 
+    shortname: John
     image: speaker.gif
     affiliation: Example Inc.
     twitter: johndoe
@@ -58,13 +77,13 @@ Each speaker should have a page in the `_speakers` directory. A speaker page sho
     gplus: +JohnDoe
     facebook: john.doe.9
     web: http://myblog.example.com/
-    lead: "John is a leader in annonymity on the net, and IRL"
+    lead: "John is a leader in anonymity on the net, and IRL"
     role: Example Speaker
     ---
 
     A longer description of the speaker goes here... This can include any MarkDown (or even html if you use the .html extension for the speaker.)
 
-Hopefully most of the metadata is self explanatory. The `speaker-id`should be unique, and is used as reference from events (presenetations/workshops). It is case sensitive, so we recommend to use only lowercase lettes.
+Hopefully most of the metadata is self explanatory. The `speaker-id` should be unique, and is used as reference from events (presentations/workshops). It is case sensitive, so we recommend to use only lowercase letters.
 
 
 
@@ -90,20 +109,18 @@ Hopefully most of the metadata is self explanatory. The `speaker-id`should be un
 
 [Jekyll](https://jekyllrb.com) is used to process the markdown and partial html pages into a complete website.
 
-[Github Pages](https://pages.github.com) is used to host the website. 
+[Github Pages](https://pages.github.com) is used to host the website.
 Github knows about jekyll, so github will use jekyll to create the website everytime new commits are pushed to github.
 
 [Universal bootstrap theme](http://universal.ondrejsvestka.cz/1-0/index2.html) is used for stylesheets and layout.
 It is free and has been downloaded from [bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template).
-It should be relatively easy to copy-paste any layout component you see in the theme into the DST4L website. 
+It should be relatively easy to copy-paste any layout component you see in the theme into the DST4L website.
 If you need this simply write your page in HTML (use `.html` as extension)
 
 
-[Bootstrap](http://getbootstrap.com) is used by the Universal theme to do the layout. 
-So if you have special layout requirements you may need to check the boottrap documentation. 
-Also, any 
+[Bootstrap](http://getbootstrap.com) is used by the Universal theme to do the layout.
+So if you have special layout requirements you may need to check the boottrap documentation.
+Also, any
 [CSS](http://getbootstrap.com/css/) and
 [Component](http://getbootstrap.com/components/)
 from Bootstrap should be easy to use in the DST4L website.
-
-
